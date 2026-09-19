@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 node:18-alpine
+FROM node:18-alpine
 
 WORKDIR /app
 
@@ -9,6 +9,6 @@ RUN npm run build
 
 RUN npm install -g serve
 
-EXPOSE 8080
+EXPOSE 3000
 
-CMD ["serve", "-s", "dist", "-l", "8080"]
+CMD ["serve", "-s", "dist", "-l", "3000"]
